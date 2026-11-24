@@ -71,6 +71,16 @@ The application supports pre-populating the app with sample data through an opti
   - `npm run build:clean` - Production build without sample data
 - GitHub Actions deployment automatically enables hydration for the production build
 
+### GitHub Pages Deployment
+
+Before deploying, a repository administrator must enable GitHub Pages in
+**Settings > Pages** and select **GitHub Actions** as the build and deployment
+source. Without this configuration, the deploy job fails with a 404 while
+creating the Pages deployment.
+
+The deployment workflow runs on pushes to `main`. After configuring Pages,
+rerun the failed workflow or push a new commit to `main`.
+
 ## Architecture
 
 ### State Management
